@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 24% 92.5%;
+    --foreground: 215 18% 13%;
+
+    --card: 210 24% 95.5%;
+    --card-foreground: 215 18% 13%;
+
+    --popover: 210 28% 96.5%;
+    --popover-foreground: 215 18% 13%;
+
+    --primary: 215 18% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 210 18% 88.5%;
+    --secondary-foreground: 215 14% 24%;
+
+    --muted: 210 18% 89.5%;
+    --muted-foreground: 215 10% 42%;
+
+    --accent: 210 100% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 18% 81%;
+    --input: 210 18% 81%;
+    --ring: 210 100% 52%;
+
+    --radius: 0.5rem;
+
+    --glow-primary: 210 100% 52%;
+    --glow-secondary: 200 85% 48%;
+
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 210 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 210 100% 60%;
+
+    --glow-primary: 210 100% 60%;
+    --glow-secondary: 200 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at top left, hsl(var(--accent) / 0.12), transparent 30%),
+      radial-gradient(circle at top right, hsl(var(--glow-secondary) / 0.08), transparent 26%),
+      linear-gradient(180deg, hsl(210 24% 96%), hsl(var(--background)));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark body {
+    background-image: none;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--muted-foreground)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--glow-secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-border {
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.05);
+  }
+
+  .glow-hover:hover {
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.1);
+    border-color: hsl(var(--muted-foreground) / 0.3);
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .animate-glow {
+    animation: glow-pulse 4s ease-in-out infinite;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+html[data-scroll-behavior="smooth"] {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full px-4 sm:px-6;
+  }
+
+  .section-space {
+    padding-block: clamp(5rem, 10vw, 8rem);
+  }
+
+  .hero-shell {
+    @apply mx-auto w-full px-4 sm:px-6;
+    padding-top: clamp(6rem, 14vh, 8rem);
+    padding-bottom: clamp(4rem, 10vh, 6rem);
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 11vw, 8rem);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+  }
+
+  .section-description {
+    font-size: clamp(1rem, 2.2vw, 1.125rem);
+  }
+}
