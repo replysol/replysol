@@ -1,14 +1,7 @@
-import { fileURLToPath } from "node:url";
-
-const projectRoot = fileURLToPath(new URL("./", import.meta.url));
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   allowedDevOrigins: ["localhost", "127.0.0.1"],
-  turbopack: {
-    root: projectRoot,
-  },
 
   webpack(config) {
     // encontra a regra padrão que trata imagens (inclui svg)
