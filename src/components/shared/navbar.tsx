@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Link from "next/link";
 import { Globe2 } from "lucide-react";
 import ThemeToggle from "./theme-toggle";
 import Brand from "@/components/shared/brand";
@@ -66,14 +65,6 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
-          {/*
-          <Link
-            href={appRoutes.adminLogin}
-            className="font-mono text-xs tracking-[0.15em] px-5 py-2 border border-border rounded-sm text-muted-foreground hover:border-accent/40 hover:text-foreground transition-all duration-300"
-          >
-            LOGIN
-          </Link>
-          */}
           <LanguageSelector compact />
           <a
             href={sectionRoutes.contact}
@@ -120,13 +111,6 @@ const Navbar = () => {
             <div className="flex items-center gap-3 mt-2">
               <ThemeToggle />
               <LanguageSelector compact />
-              <Link
-                href={appRoutes.adminLogin}
-                onClick={() => setMobileOpen(false)}
-                className="flex-1 font-mono text-xs tracking-[0.15em] px-5 py-3 border border-border rounded-sm text-muted-foreground text-center hover:border-accent/40 hover:text-foreground transition-all"
-              >
-                {t.nav.login}
-              </Link>
               <a
                 href={sectionRoutes.contact}
                 onClick={() => setMobileOpen(false)}

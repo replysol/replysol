@@ -8,7 +8,6 @@ const customJestConfig = {
   clearMocks: true,
   collectCoverageFrom: [
     "src/lib/**/*.{ts,tsx}",
-    "src/components/admin/**/*.{ts,tsx}",
     "src/views/**/*.{ts,tsx}",
     "app/**/*.{ts,tsx}",
     "!src/**/*.d.ts",

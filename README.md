@@ -2,7 +2,7 @@
 
 Site institucional da Reply Solutions, desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
 
-O projeto inclui a landing page principal, uma pagina de produto para o **IA Code Reviewer Security**, internacionalizacao via cookie/deteccao de pais e uma area administrativa demonstrativa com dados mockados.
+O projeto inclui a landing page principal, uma pagina de produto para o **IA Code Reviewer Security** e internacionalizacao via cookie/deteccao de pais.
 
 ## Stack
 
@@ -24,18 +24,13 @@ O projeto inclui a landing page principal, uma pagina de produto para o **IA Cod
 - Deteccao inicial de idioma por pais via headers de geolocalizacao
 - Preferencia de idioma persistida em cookie
 - Alternancia de tema claro/escuro
-- Area admin demonstrativa com login mockado
 - Sitemap, robots, manifest e metadata
-- Testes unitarios para autenticacao/admin/metadata
+- Testes unitarios para metadata e componentes principais
 
 ## Rotas
 
 - `/` - Site principal
 - `/ia-code-reviewer-security` - Pagina do produto IA Code Reviewer Security
-- `/admin` - Entrada administrativa
-- `/admin/login` - Login administrativo mockado
-- `/admin/dashboard` - Alias de dashboard
-- `/dashboard/admin` - Dashboard administrativo mockado
 
 ## Multi-idioma
 
@@ -59,16 +54,6 @@ Os textos ficam centralizados em:
 ```text
 src/i18n/dictionaries.ts
 ```
-
-## Admin mockado
-
-O fluxo administrativo e apenas demonstrativo. As credenciais mockadas ficam em:
-
-```text
-src/lib/admin-auth.ts
-```
-
-Esse fluxo usa `localStorage` e nao deve ser tratado como autenticacao real de producao.
 
 ## Como rodar
 
@@ -121,10 +106,9 @@ npx tsc --noEmit
 ```text
 app/                         Rotas do Next App Router
 src/components/              Componentes de UI e secoes da landing
-src/components/admin/        Componentes da area administrativa
 src/components/shared/       Navbar, brand, tema e elementos compartilhados
 src/i18n/                    Configuracao e dicionarios de idioma
-src/lib/                     Helpers de metadata, autenticacao mockada e utils
+src/lib/                     Helpers de metadata e utils
 src/views/                   Views de paginas mais complexas
 src/test/                    Testes automatizados
 src/assets/                  Imagens e assets usados no site
@@ -135,4 +119,3 @@ src/assets/                  Imagens e assets usados no site
 - O projeto usa `npm` como gerenciador principal.
 - Os lockfiles do Bun foram removidos para evitar divergencia com `package-lock.json`.
 - A pagina de contato atualmente usa `mailto:`.
-- A dashboard administrativa e uma demonstracao visual com dados mockados.

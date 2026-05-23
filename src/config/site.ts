@@ -11,7 +11,6 @@ export const siteConfig = {
     "desenvolvimento web",
     "desenvolvimento mobile",
     "arquitetura de software",
-    "dashboard administrativo",
     "next.js",
     "react",
     "typescript",
