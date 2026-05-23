@@ -6,7 +6,7 @@ import { useI18n } from "@/i18n/locale-provider";
 
 const WhatsAppButton = () => {
   const { t } = useI18n();
-  const phone = "5521999999999";
+  const phone = "***";
   const message = t.whatsapp;
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
