@@ -14,6 +14,7 @@ import ProblemsSection from "@/components/problems-section";
 import TeamCarouselSection from "@/components/team-carousel-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
+import AboutSection from "@/components/about-section";
 
 export const metadata: Metadata = createPageMetadata({
   title: siteConfig.title,
@@ -59,7 +60,7 @@ export default function HomePage() {
       <HeroSection />
       <ProblemsSection />
       <ServicesSection />
-      <TeamCarouselSection/>
+      <AboutSection />
       <ClientsSection />
       <FAQSection />
       <ContactSection />

@@ -19,7 +19,6 @@ const Navbar = () => {
     { label: t.nav.pentest, href: appRoutes.pentest },
   ] as const;
   const mainNavigation = [
-    { label: t.nav.technologies, href: sectionRoutes.technologies },
     { label: t.nav.about, href: sectionRoutes.about },
     { label: t.nav.contact, href: sectionRoutes.contact },
   ] as const;

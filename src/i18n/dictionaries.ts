@@ -131,6 +131,23 @@ export const dictionaries = {
         ["24/7", "Suporte"],
       ],
     },
+    aboutSection: {
+      eyebrow: "[ SOBRE ]",
+      title: "Equipe sênior. Comunicação direta. Entrega consistente.",
+      description:
+        "Contamos com uma equipe extremamente profissional, formada por desenvolvedores sêniores, especialistas técnicos e perfis complementares que trabalham com clareza, previsibilidade e responsabilidade do primeiro escopo ao deploy.",
+      kicker: "Time alinhado. Processo claro. Execução de ponta a ponta.",
+      paragraphs: [
+        "Nossa operação funciona como um time de alta confiança: decisões diretas, leitura técnica rápida e colaboração entre pessoas que sabem exatamente onde precisam contribuir.",
+        "Isso reduz ruído na comunicação, evita retrabalho e deixa o cliente acompanhar a evolução do projeto com mais segurança e previsibilidade.",
+      ],
+      pills: ["Sêniores", "Colaboração", "Entrega consistente"],
+      stats: [
+        ["Arquitetura", "Visão técnica para construir soluções que crescem sem virar remendo."],
+        ["Execução", "Times que trabalham com foco, ritmo e responsabilidade sobre o resultado."],
+        ["Confiabilidade", "Padrão de entrega que sustenta operação, evolução e manutenção."],
+      ],
+    },
     team: {
       eyebrow: "[ equipe ]",
       imageAlt: "Equipe",
@@ -183,6 +200,9 @@ export const dictionaries = {
         message: "MENSAGEM",
       },
       submit: "ENVIAR MENSAGEM",
+      sending: "ENVIANDO...",
+      success: "Mensagem enviada com sucesso.",
+      error: "Nao foi possivel enviar a mensagem. Tente novamente.",
       subject: "Contato",
       bodyLabels: {
         name: "Nome",
@@ -430,6 +450,23 @@ export const dictionaries = {
         ["24/7", "Support"],
       ],
     },
+    aboutSection: {
+      eyebrow: "[ ABOUT ]",
+      title: "Senior team. Direct communication. Consistent delivery.",
+      description:
+        "We work with an extremely professional team of senior developers, technical specialists and complementary profiles that operate with clarity, predictability and accountability from the first scope to deployment.",
+      kicker: "Aligned team. Clear process. End-to-end execution.",
+      paragraphs: [
+        "Our operation works like a high-trust team: direct decisions, fast technical reading and collaboration between people who know exactly where they need to contribute.",
+        "That reduces communication noise, avoids rework and gives the client a clearer and more predictable view of the project as it evolves.",
+      ],
+      pills: ["Seniors", "Collaboration", "Consistent delivery"],
+      stats: [
+        ["Architecture", "Technical thinking to build solutions that can grow without becoming a patchwork."],
+        ["Execution", "Teams that work with focus, rhythm and accountability for the outcome."],
+        ["Reliability", "A delivery standard that supports operations, evolution and maintenance."],
+      ],
+    },
     team: {
       eyebrow: "[ team ]",
       imageAlt: "Team",
@@ -482,6 +519,9 @@ export const dictionaries = {
         message: "MESSAGE",
       },
       submit: "SEND MESSAGE",
+      sending: "SENDING...",
+      success: "Message sent successfully.",
+      error: "Unable to send the message. Please try again.",
       subject: "Contact",
       bodyLabels: {
         name: "Name",
