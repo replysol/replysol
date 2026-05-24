@@ -26,7 +26,7 @@ const SectionHeading = ({
         className,
       )}
     >
-      <p className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase sm:text-xs">
+      <p className="eyebrow-label">
         {eyebrow}
       </p>
       <h2 className="section-title font-bold tracking-tight">{title}</h2>

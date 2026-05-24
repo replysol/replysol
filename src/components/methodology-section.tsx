@@ -24,7 +24,7 @@ const MethodologySection = () => {
   const canGoDown = startIndex + VISIBLE_ITEMS < methodologySteps.length;
 
   return (
-    <section id="tecnologias" className="section-space relative border-t border-border/50 bg-card/20">
+    <section id="technologies" className="section-space relative border-t border-border/50 bg-card/20">
       <div className="absolute inset-0 bg-grid opacity-20" />
 
       <div className="relative container section-shell">
@@ -136,7 +136,7 @@ const MethodologySection = () => {
         >
           <div className="inline-flex max-w-full items-center gap-3 rounded-lg border border-border/60 bg-card/65 px-4 py-4 text-center backdrop-blur-md sm:px-6">
             <GitBranch className="h-4 w-4 text-accent" />
-            <p className="font-mono text-[11px] tracking-[0.18em] text-muted-foreground uppercase">
+            <p className="meta-label">
               {t.methodology.note}
             </p>
           </div>

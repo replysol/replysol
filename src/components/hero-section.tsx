@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroBgLight from "@/assets/hero-bg-light.jpg";
+import { appRoutes } from "@/config/routes";
 import { useI18n } from "@/i18n/locale-provider";
 
 const HeroSection = () => {
@@ -22,14 +23,6 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background dark:from-background/10 dark:via-background/60" />
 
       <div className="relative z-10 container hero-shell text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-6 font-mono text-[10px] tracking-[0.3em] text-muted-foreground uppercase sm:mb-8 sm:text-xs"
-        >
-          {hero.eyebrow}
-        </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -48,7 +41,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mx-auto mb-10 max-w-xl font-mono text-sm tracking-wide text-muted-foreground sm:mb-12 sm:text-base"
         >
-          {hero.description}
+          {hero.offer}
         </motion.p>
 
         <motion.div
@@ -58,13 +51,13 @@ const HeroSection = () => {
           className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4"
         >
           <a
-            href="#servicos"
+            href={appRoutes.softwareDevelopment}
             className="w-full rounded-sm bg-foreground px-8 py-3.5 font-mono text-xs tracking-[0.15em] text-background transition-all duration-300 hover:bg-foreground/90 sm:w-auto"
           >
             {hero.primaryCta}
           </a>
           <a
-            href="#contato"
+            href="#contact"
             className="w-full rounded-sm border border-foreground/20 px-8 py-3.5 font-mono text-xs tracking-[0.15em] text-foreground transition-all duration-300 hover:border-foreground/50 sm:w-auto"
           >
             {hero.secondaryCta}

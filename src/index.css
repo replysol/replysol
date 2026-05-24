@@ -196,4 +196,20 @@ body {
   .section-description {
     font-size: clamp(1rem, 2.2vw, 1.125rem);
   }
+
+  .eyebrow-label {
+    @apply font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground;
+  }
+
+  .meta-label {
+    @apply font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground;
+  }
+
+  .nav-link {
+    @apply font-mono text-[0.8rem] leading-none uppercase tracking-[0.06em] text-muted-foreground transition-colors duration-300 hover:text-foreground whitespace-nowrap;
+  }
+
+  .nav-action {
+    @apply font-mono text-[0.8rem] leading-none uppercase tracking-[0.06em] whitespace-nowrap;
+  }
 }

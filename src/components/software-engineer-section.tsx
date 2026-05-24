@@ -8,7 +8,7 @@ const SoftwareEngineerSection = () => {
   const { t } = useI18n();
 
   return (
-    <section id="sobre" className="section-space relative border-t border-border/50">
+    <section id="about" className="section-space relative border-t border-border/50">
       <div className="container section-shell">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
@@ -48,7 +48,7 @@ const SoftwareEngineerSection = () => {
               {t.software.stats.map(([value, label]) => (
                 <div key={label}>
                   <p className="font-mono text-xl font-bold text-foreground sm:text-2xl">{value}</p>
-                  <p className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground mt-1 uppercase">
+                  <p className="meta-label mt-1">
                     {label}
                   </p>
                 </div>

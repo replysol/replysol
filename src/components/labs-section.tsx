@@ -97,7 +97,7 @@ const LabsSection = () => {
           </p>
 
           <a
-            href="/#contato"
+            href="/#contact"
             className="inline-flex items-center gap-2 rounded-sm bg-foreground px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-background transition-all duration-300 hover:bg-foreground/90"
           >
             <Github className="h-4 w-4" />

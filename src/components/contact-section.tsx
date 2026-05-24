@@ -29,7 +29,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="section-space relative border-t border-border/50">
+    <section id="contact" className="section-space relative border-t border-border/50">
       <div className="container section-shell">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <motion.div
@@ -74,7 +74,7 @@ const ContactSection = () => {
               { key: "company", label: t.contact.labels.company, type: "text" },
             ].map((field) => (
               <div key={field.key}>
-                <label className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground block mb-2">
+                <label className="eyebrow-label block mb-2">
                   {field.label}
                 </label>
                 <input
@@ -87,7 +87,7 @@ const ContactSection = () => {
               </div>
             ))}
             <div>
-              <label className="font-mono text-[10px] tracking-[0.3em] text-muted-foreground block mb-2">
+              <label className="eyebrow-label block mb-2">
                 {t.contact.labels.message}
               </label>
               <textarea

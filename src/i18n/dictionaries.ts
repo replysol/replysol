@@ -5,8 +5,10 @@ export const dictionaries = {
       technologies: "TECNOLOGIAS",
       about: "SOBRE",
       contact: "CONTATO",
-      aiReviewer: "IA REVIEWER",
-      talk: "FALE CONOSCO",
+      aiReviewer: "REVISOR DE CÓDIGO IA",
+      softwareDevelopment: "DESENVOLVIMENTO DE SOFTWARE",
+      pentest: "PENTEST",
+      talk: "CONTATO",
       language: "Idioma",
       portuguese: "Português",
       english: "Inglês",
@@ -23,8 +25,9 @@ export const dictionaries = {
     hero: {
       eyebrow: "Software House",
       titleLines: ["Reply", "Solutions"],
-      description: "Respostas rápidas e soluções sob medida.",
-      primaryCta: "NOSSOS SERVIÇOS",
+      offer: "Desenvolvemos, auditamos e evoluímos software para empresas que não podem parar.",
+      description: "Aplicações web, plataformas internas, sustentação técnica, segurança e evolução contínua com engenharia séria.",
+      primaryCta: "DESENVOLVIMENTO",
       secondaryCta: "INICIAR PROJETO",
     },
     services: {
@@ -61,6 +64,37 @@ export const dictionaries = {
           description:
             "Testes de intrusão, análise de vulnerabilidades e fortalecimento de ambientes com práticas avançadas de segurança.",
         },
+      ],
+    },
+    homeServices: {
+      eyebrow: "[ CAMINHOS ]",
+      title: "Escolha o tipo de problema que precisa resolver agora.",
+      items: [
+        [
+          "Desenvolvimento de Software",
+          "Criação, modernização e sustentação de sistemas web, plataformas internas, APIs e produtos digitais.",
+          "Ver desenvolvimento",
+        ],
+        [
+          "IA Code Reviewer Security",
+          "Revisão de código com IA antes do commit para reduzir vulnerabilidades, erros de lógica e retrabalho técnico.",
+          "Ver IA reviewer",
+        ],
+        [
+          "Pentest e Segurança",
+          "Testes ofensivos, análise de vulnerabilidades e evidência técnica sobre onde seu sistema realmente falha.",
+          "Falar sobre segurança",
+        ],
+      ],
+    },
+    problems: {
+      eyebrow: "[ PROBLEMAS ]",
+      title: "Entramos quando software começa a travar crescimento, segurança ou operação.",
+      items: [
+        ["Sistema lento ou instável", "Identificamos gargalos, bugs recorrentes e pontos frágeis que prejudicam a operação."],
+        ["Produto difícil de evoluir", "Organizamos arquitetura, código e prioridades para reduzir custo de mudança."],
+        ["Equipe sobrecarregada", "Assumimos desenvolvimento, sustentação ou revisão técnica sem bagunçar o fluxo atual."],
+        ["Risco técnico ou de segurança", "Auditamos aplicações, APIs e processos para encontrar falhas antes que virem incidente."],
       ],
     },
     methodology: {
@@ -200,7 +234,6 @@ export const dictionaries = {
         ["Ruby", "Ruby on Rails, Sinatra, Hanami"],
         ["PHP", "Laravel, Symfony, Slim, WordPress"],
         ["C#", ".NET, ASP.NET Core, Blazor, Entity Framework"],
-        ["TSX", "React, Next.js, Remix, component libraries"],
       ],
       leadershipEyebrow: "Liderança técnica",
       leadershipTitle: "Visibilidade por equipe, pessoa e tipo de risco.",
@@ -224,6 +257,42 @@ export const dictionaries = {
         "Integre revisão de segurança com IA ao processo da sua equipe sem esperar o problema chegar ao fim do ciclo.",
       finalCta: "Solicitar demonstração",
     },
+    softwareDevelopmentPage: {
+      eyebrow: "Desenvolvimento de Software",
+      title: "Software sob medida para operação, produto e crescimento.",
+      description:
+        "Criamos, modernizamos e sustentamos aplicações críticas com arquitetura clara, código bem mantido, segurança e processos que evitam retrabalho.",
+      primaryCta: "Iniciar projeto",
+      secondaryCta: "Ver abordagem",
+      pillarsEyebrow: "O que entregamos",
+      pillarsTitle: "Do produto novo ao sistema que precisa continuar vivo.",
+      pillars: [
+        ["Aplicações Web", "Dashboards, portais, plataformas SaaS e sistemas internos com foco em uso real, performance e manutenção."],
+        ["APIs e Backends", "Serviços, integrações, regras de negócio e arquitetura preparada para crescer sem virar um bloco frágil."],
+        ["Modernização", "Refatoração, migração de stacks, correção de gargalos e evolução de sistemas legados sem parar a operação."],
+        ["Sustentação Técnica", "Correções, melhorias, monitoramento e evolução contínua para produtos que não podem ficar sem dono."],
+      ],
+      processEyebrow: "Como trabalhamos",
+      processTitle: "Escopo claro, engenharia consistente e entrega acompanhável.",
+      process: [
+        ["01", "Entendimento", "Mapeamos operação, usuários, integrações, riscos e objetivos reais do projeto."],
+        ["02", "Arquitetura", "Definimos stack, módulos, dados, segurança e decisões técnicas antes da implementação pesada."],
+        ["03", "Desenvolvimento", "Construímos com ciclos curtos, revisão técnica, qualidade e visibilidade para o cliente."],
+        ["04", "Evolução", "Acompanhamos estabilidade, melhorias, novas demandas e sustentação depois da entrega."],
+      ],
+      outcomesEyebrow: "Resultado esperado",
+      outcomesTitle: "Menos improviso. Mais previsibilidade técnica.",
+      outcomes: [
+        "Código mais fácil de evoluir",
+        "Arquitetura compatível com crescimento",
+        "Redução de bugs recorrentes",
+        "Entregas acompanháveis por prioridade",
+        "Base preparada para auditoria e segurança",
+        "Produto com dono técnico depois do lançamento",
+      ],
+      finalText: "Se o software sustenta sua operação, ele precisa ser tratado como ativo crítico.",
+      finalCta: "Falar sobre desenvolvimento",
+    },
     notFound: {
       title: "Página não encontrada",
       home: "Voltar para o início",
@@ -236,6 +305,8 @@ export const dictionaries = {
       about: "ABOUT",
       contact: "CONTACT",
       aiReviewer: "AI REVIEWER",
+      softwareDevelopment: "SOFTWARE DEVELOPMENT",
+      pentest: "PENTEST",
       talk: "CONTACT US",
       language: "Language",
       portuguese: "Portuguese",
@@ -253,8 +324,9 @@ export const dictionaries = {
     hero: {
       eyebrow: "Software House",
       titleLines: ["Reply", "Solutions"],
-      description: "Fast answers and tailored solutions.",
-      primaryCta: "OUR SERVICES",
+      offer: "We build, audit and evolve software for companies that cannot stop.",
+      description: "Web applications, internal platforms, technical maintenance, security and continuous evolution with serious engineering.",
+      primaryCta: "SOFTWARE DEVELOPMENT",
       secondaryCta: "START A PROJECT",
     },
     services: {
@@ -291,6 +363,37 @@ export const dictionaries = {
           description:
             "Intrusion testing, vulnerability analysis and environment hardening with advanced security practices.",
         },
+      ],
+    },
+    homeServices: {
+      eyebrow: "[ PATHS ]",
+      title: "Choose the kind of problem you need to solve now.",
+      items: [
+        [
+          "Software Development",
+          "Creation, modernization and maintenance of web systems, internal platforms, APIs and digital products.",
+          "See development",
+        ],
+        [
+          "AI Code Reviewer Security",
+          "AI code review before commit to reduce vulnerabilities, logic errors and technical rework.",
+          "See AI reviewer",
+        ],
+        [
+          "Pentest and Security",
+          "Offensive testing, vulnerability analysis and technical evidence of where your system actually fails.",
+          "Talk security",
+        ],
+      ],
+    },
+    problems: {
+      eyebrow: "[ PROBLEMS ]",
+      title: "We step in when software starts blocking growth, security or operations.",
+      items: [
+        ["Slow or unstable system", "We identify bottlenecks, recurring bugs and weak points that hurt operations."],
+        ["Product is hard to evolve", "We organize architecture, code and priorities to reduce the cost of change."],
+        ["Overloaded team", "We take on development, maintenance or technical review without disrupting the current flow."],
+        ["Technical or security risk", "We audit applications, APIs and processes to find failures before they become incidents."],
       ],
     },
     methodology: {
@@ -430,7 +533,6 @@ export const dictionaries = {
         ["Ruby", "Ruby on Rails, Sinatra, Hanami"],
         ["PHP", "Laravel, Symfony, Slim, WordPress"],
         ["C#", ".NET, ASP.NET Core, Blazor, Entity Framework"],
-        ["TSX", "React, Next.js, Remix, component libraries"],
       ],
       leadershipEyebrow: "Technical leadership",
       leadershipTitle: "Visibility by team, person and risk type.",
@@ -453,6 +555,42 @@ export const dictionaries = {
       finalText:
         "Integrate AI security review into your team's process before problems reach the end of the cycle.",
       finalCta: "Request a demo",
+    },
+    softwareDevelopmentPage: {
+      eyebrow: "Software Development",
+      title: "Custom software for operations, products and growth.",
+      description:
+        "We create, modernize and maintain critical applications with clear architecture, maintainable code, security and processes that reduce rework.",
+      primaryCta: "Start a project",
+      secondaryCta: "See approach",
+      pillarsEyebrow: "What we deliver",
+      pillarsTitle: "From new products to systems that need to keep running.",
+      pillars: [
+        ["Web Applications", "Dashboards, portals, SaaS platforms and internal systems focused on real usage, performance and maintenance."],
+        ["APIs and Backends", "Services, integrations, business rules and architecture prepared to grow without becoming fragile."],
+        ["Modernization", "Refactoring, stack migration, bottleneck fixes and legacy system evolution without stopping operations."],
+        ["Technical Maintenance", "Fixes, improvements, monitoring and continuous evolution for products that cannot be left ownerless."],
+      ],
+      processEyebrow: "How we work",
+      processTitle: "Clear scope, consistent engineering and visible delivery.",
+      process: [
+        ["01", "Discovery", "We map operations, users, integrations, risks and the real goals behind the project."],
+        ["02", "Architecture", "We define stack, modules, data, security and technical decisions before heavy implementation."],
+        ["03", "Development", "We build through short cycles, technical review, quality and clear visibility for the client."],
+        ["04", "Evolution", "We track stability, improvements, new demands and maintenance after delivery."],
+      ],
+      outcomesEyebrow: "Expected outcome",
+      outcomesTitle: "Less improvisation. More technical predictability.",
+      outcomes: [
+        "Code that is easier to evolve",
+        "Architecture ready for growth",
+        "Fewer recurring bugs",
+        "Delivery tracked by priority",
+        "Base prepared for audit and security",
+        "Product with technical ownership after launch",
+      ],
+      finalText: "If software supports your operation, it needs to be treated as a critical asset.",
+      finalCta: "Talk about development",
     },
     notFound: {
       title: "Page not found",

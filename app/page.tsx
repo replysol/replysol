@@ -10,12 +10,10 @@ import WhatsAppButton from "@/components/shared/whatsapp-button";
 import HeroSection from "@/components/hero-section";
 import ClientsSection from "@/components/clients-section";
 import ServicesSection from "@/components/services-section";
+import ProblemsSection from "@/components/problems-section";
 import TeamCarouselSection from "@/components/team-carousel-section";
 import FAQSection from "@/components/faq-section";
 import ContactSection from "@/components/contact-section";
-import PentestSection from "@/components/pentest-section";
-import SoftwareEngineerSection from "@/components/software-engineer-section";
-import MethodologySection from "@/components/methodology-section";
 
 export const metadata: Metadata = createPageMetadata({
   title: siteConfig.title,
@@ -59,11 +57,9 @@ export default function HomePage() {
       <Navbar />
       <WhatsAppButton/>
       <HeroSection />
+      <ProblemsSection />
       <ServicesSection />
-      <MethodologySection />
-      <SoftwareEngineerSection />
       <TeamCarouselSection/>
-      <PentestSection />
       <ClientsSection />
       <FAQSection />
       <ContactSection />

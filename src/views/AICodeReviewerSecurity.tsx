@@ -82,7 +82,7 @@ const AICodeReviewerSecurity = () => {
               transition={{ duration: 0.7 }}
               className="max-w-3xl"
             >
-              <p className="mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground sm:text-xs">
+              <p className="mb-6 eyebrow-label">
                 {t.ai.eyebrow}
               </p>
               <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-gradient sm:text-5xl lg:text-7xl">
@@ -117,7 +117,7 @@ const AICodeReviewerSecurity = () => {
             >
               <div className="mb-4 flex items-center justify-between border-b border-border/60 pb-4">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                  <p className="eyebrow-label">
                     {t.ai.scan.label}
                   </p>
                   <p className="mt-1 font-mono text-sm text-foreground">feature/payment-rules</p>
@@ -148,7 +148,7 @@ const AICodeReviewerSecurity = () => {
                   {t.ai.scan.metrics.map(([value, label]) => (
                     <div key={label} className="rounded-lg border border-border/60 bg-background/70 p-3">
                       <p className="text-lg font-bold text-foreground">{value}</p>
-                      <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                      <p className="mt-1 meta-label">
                         {label}
                       </p>
                     </div>
@@ -162,31 +162,43 @@ const AICodeReviewerSecurity = () => {
         <section id="como-funciona" className="section-space relative">
           <div className="absolute inset-0 bg-grid opacity-25" />
           <div className="container section-shell relative">
-            <div className="mb-14 max-w-3xl">
-              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            <div className="mb-12 grid gap-6 lg:grid-cols-[0.75fr_1fr] lg:items-end">
+              <div>
+              <p className="mb-4 eyebrow-label">
                 {t.ai.flowEyebrow}
               </p>
               <h2 className="section-title font-bold tracking-tight text-foreground">
                 {t.ai.flowTitle}
               </h2>
+              </div>
+              <p className="max-w-2xl leading-relaxed text-muted-foreground">
+                {t.ai.description}
+              </p>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {reviewFlow.map((step, index) => (
-                <div key={step.title} className="rounded-lg border border-border/60 bg-card/75 p-5 backdrop-blur-md">
-                  <step.icon className="mb-6 h-5 w-5 text-accent" />
+              {reviewFlow.map((step, index) => {
+                const Icon = step.icon;
+
+                return (
+                <article key={step.title} className="min-h-64 rounded-lg border border-border/60 bg-card/75 p-5 backdrop-blur-md transition hover:border-accent/35">
+                  <div className="mb-10 flex items-center justify-between">
+                    <Icon className="h-5 w-5 text-accent" />
+                    <span className="meta-label">0{index + 1}</span>
+                  </div>
                   <h3 className="mb-3 font-mono text-sm font-semibold text-foreground">{t.ai.flow[index][0]}</h3>
                   <p className="text-sm leading-relaxed text-muted-foreground">{t.ai.flow[index][1]}</p>
-                </div>
-              ))}
+                </article>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <section className="section-space border-t border-border/50">
+        <section className="section-space border-t border-border/50 bg-card/20">
           <div className="container section-shell">
             <div className="mb-12 max-w-4xl">
-              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="mb-4 eyebrow-label">
                 {t.ai.coverageEyebrow}
               </p>
               <h2 className="section-title font-bold tracking-tight text-foreground">
@@ -197,9 +209,10 @@ const AICodeReviewerSecurity = () => {
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-px overflow-hidden rounded-lg border border-border/60 bg-border/60 sm:grid-cols-2 lg:grid-cols-3">
               {t.ai.languageCoverage.map(([language, frameworks]) => (
-                <div key={language} className="rounded-lg border border-border/60 bg-card/75 p-4 backdrop-blur-md">
+                <div key={language} className="bg-background/90 p-5 transition hover:bg-card/80">
+                  <Code2 className="mb-6 h-5 w-5 text-accent" />
                   <p className="font-mono text-sm font-semibold text-foreground">{language}</p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{frameworks}</p>
                 </div>
@@ -211,7 +224,7 @@ const AICodeReviewerSecurity = () => {
         <section className="section-space border-t border-border/50">
           <div className="container section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div>
-              <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <p className="mb-4 eyebrow-label">
                 {t.ai.leadershipEyebrow}
               </p>
               <h2 className="section-title font-bold tracking-tight text-foreground">
@@ -232,7 +245,7 @@ const AICodeReviewerSecurity = () => {
                   <div key={metric.label} className="rounded-lg border border-border/60 bg-background/70 p-4">
                     <metric.icon className="mb-4 h-4 w-4 text-accent" />
                     <p className="font-mono text-2xl font-bold text-foreground">{metric.value}</p>
-                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                    <p className="mt-1 meta-label">
                       {metric.label}
                     </p>
                   </div>
@@ -241,7 +254,7 @@ const AICodeReviewerSecurity = () => {
 
               <div className="overflow-x-auto rounded-lg border border-border/60">
                 <div className="min-w-[34rem]">
-                  <div className="grid grid-cols-4 bg-secondary/60 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  <div className="grid grid-cols-4 bg-secondary/60 px-4 py-3 meta-label">
                     {t.ai.tableHeaders.map((header) => (
                       <span key={header}>{header}</span>
                     ))}
@@ -267,7 +280,7 @@ const AICodeReviewerSecurity = () => {
           <div className="container section-shell">
             <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
               <div>
-                <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                <p className="mb-4 eyebrow-label">
                   {t.ai.impactEyebrow}
                 </p>
                 <h2 className="section-title font-bold tracking-tight text-foreground">
@@ -287,7 +300,7 @@ const AICodeReviewerSecurity = () => {
 
             <div className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-border/60 pt-8 sm:flex-row sm:items-center">
               <div>
-                <p className="font-mono text-xs uppercase tracking-[0.24em] text-muted-foreground">
+                <p className="meta-label">
                   Reply Solutions
                 </p>
                 <p className="mt-2 max-w-xl text-muted-foreground">
@@ -295,7 +308,7 @@ const AICodeReviewerSecurity = () => {
                 </p>
               </div>
               <Link
-                href="/#contato"
+                href="/#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-foreground px-7 py-3.5 font-mono text-xs uppercase tracking-[0.15em] text-background transition-all duration-300 hover:bg-foreground/90"
               >
                 {t.ai.finalCta}
