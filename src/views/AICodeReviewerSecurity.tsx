@@ -14,8 +14,6 @@ import {
   TerminalSquare,
   UsersRound,
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
-import heroBgLight from "@/assets/hero-bg-light.jpg";
 import Footer from "@/components/footer-section";
 import Navbar from "@/components/shared/navbar";
 import WhatsAppButton from "@/components/shared/whatsapp-button";
@@ -55,6 +53,21 @@ const dashboardRows = [
   { name: "Carla", found: 23, fixed: 22, rate: "96%" },
 ] as const;
 
+const aiReviewPanels = [
+  {
+    title: "model.scan(diff)",
+    rows: ["embedding: auth-flow", "cwe: broken-access-control", "confidence: 0.94"],
+  },
+  {
+    title: "semantic graph",
+    rows: ["source -> controller", "policy gap detected", "sink: payment.update"],
+  },
+  {
+    title: "risk ranking",
+    rows: ["severity: high", "exploitability: medium", "fix: ownership check"],
+  },
+] as const;
+
 const AICodeReviewerSecurity = () => {
   const { t } = useI18n();
 
@@ -64,16 +77,59 @@ const AICodeReviewerSecurity = () => {
       <WhatsAppButton />
 
       <main>
-        <section className="relative flex min-h-[92dvh] items-center overflow-hidden border-b border-border/50">
-          <div
-            className="absolute inset-0 hidden bg-cover bg-center opacity-35 dark:block"
-            style={{ backgroundImage: `url(${heroBg.src})` }}
-          />
-          <div
-            className="absolute inset-0 block bg-cover bg-center opacity-70 dark:hidden"
-            style={{ backgroundImage: `url(${heroBgLight.src})` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/25 via-background/70 to-background" />
+        <section className="relative flex min-h-dvh items-center overflow-hidden border-b border-border/50">
+          <div className="absolute inset-0 bg-grid opacity-[0.16]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,hsl(var(--accent)/0.18),transparent_28%),radial-gradient(circle_at_88%_68%,hsl(var(--glow-secondary)/0.12),transparent_24%),linear-gradient(180deg,hsl(var(--background)/0.8),hsl(var(--background)))]" />
+          <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(45deg,hsl(var(--foreground))_1px,transparent_1px)] [background-size:24px_24px]" />
+          <div className="absolute right-0 top-14 hidden h-[76%] w-[56%] overflow-hidden lg:block">
+            <div className="absolute inset-0 [mask-image:linear-gradient(90deg,transparent,black_18%,black_76%,transparent)]">
+              <div className="absolute left-10 top-8 h-80 w-80 rounded-full border border-accent/15 bg-accent/10 blur-3xl" />
+              <div className="absolute right-8 top-10 h-[28rem] w-[28rem] rounded-full border border-accent/10" />
+              <div className="absolute right-20 top-24 h-72 w-72 rounded-full border border-accent/15" />
+              <div className="absolute right-32 top-36 h-48 w-48 rounded-full border border-border/30" />
+
+              <div className="absolute right-24 top-28 grid h-56 w-56 grid-cols-5 gap-5 rounded-full p-8">
+                {Array.from({ length: 25 }).map((_, index) => {
+                  const isActive = [2, 6, 8, 12, 16, 18, 22].includes(index);
+
+                  return (
+                    <span
+                      key={index}
+                      className={isActive ? "h-2 w-2 rounded-full bg-accent/70 shadow-[0_0_20px_hsl(var(--accent)/0.25)]" : "h-1.5 w-1.5 rounded-full bg-accent/22"}
+                    />
+                  );
+                })}
+              </div>
+
+              <div className="absolute left-0 top-16 grid w-[62%] grid-cols-1 gap-4">
+                {aiReviewPanels.map((panel, index) => (
+                  <div
+                    key={panel.title}
+                    className={index === 1 ? "ml-16 rounded-lg border border-border/35 bg-card/30 p-4 font-mono text-[0.68rem] leading-5 text-accent/55 backdrop-blur-sm" : "rounded-lg border border-border/35 bg-card/30 p-4 font-mono text-[0.68rem] leading-5 text-accent/55 backdrop-blur-sm"}
+                  >
+                    <div className="mb-3 flex items-center gap-2 border-b border-border/30 pb-3 text-foreground/45">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent/70" />
+                      <span>{panel.title}</span>
+                    </div>
+                    <div className="space-y-2">
+                      {panel.rows.map((row) => (
+                        <p key={row} className="whitespace-nowrap">
+                          <span className="text-foreground/25">&gt;</span> {row}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="absolute bottom-20 left-16 right-20 h-px bg-gradient-to-r from-transparent via-accent/35 to-transparent" />
+              <div className="absolute bottom-20 left-16 top-28 w-px bg-gradient-to-b from-transparent via-accent/25 to-transparent" />
+              <div className="absolute bottom-40 left-44 right-28 h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+              <div className="absolute right-32 top-40 h-40 w-px bg-gradient-to-b from-accent/25 via-border/40 to-transparent" />
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/92 to-background/78" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background" />
 
           <div className="container hero-shell relative z-10 grid items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
             <motion.div
