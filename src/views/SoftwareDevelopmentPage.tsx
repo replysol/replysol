@@ -15,7 +15,6 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 import Footer from "@/components/footer-section";
 import Navbar from "@/components/shared/navbar";
 import WhatsAppButton from "@/components/shared/whatsapp-button";
@@ -24,6 +23,12 @@ import { useI18n } from "@/i18n/locale-provider";
 
 const capabilityIcons = [Code2, CloudCog, ShieldCheck, Network, Gauge, Wrench] as const;
 const pillarIcons = [Blocks, DatabaseZap, GitBranch, Wrench] as const;
+
+const editorColumns = [
+  ["const roadmap = sprint.plan();", "await api.deploy({ safe: true });", "cache.invalidate('/pricing');", "pipeline.status === 'green'"],
+  ["type Contract = z.infer<typeof Schema>;", "feature.flag('billing-v2')", "db.transaction(async trx => {", "observability.trace(request.id)"],
+  ["git branch release/2026.05", "pnpm test --filter checkout", "docker compose up api", "pullRequest.reviewed = true"],
+] as const;
 
 export default function SoftwareDevelopmentPageView() {
   const { t } = useI18n();
@@ -37,9 +42,38 @@ export default function SoftwareDevelopmentPageView() {
 
       <main>
         <section className="relative min-h-dvh overflow-hidden border-b border-border/50">
-          <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-cover bg-center opacity-25 dark:block" style={{ backgroundImage: `url(${heroBg.src})` }} />
-          <div className="absolute inset-0 bg-grid opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+          <div className="absolute inset-0 bg-grid opacity-20" />
+          <div className="absolute inset-0 bg-[linear-gradient(115deg,hsl(var(--background))_0%,hsl(var(--background)/0.96)_42%,hsl(var(--accent)/0.12)_100%)]" />
+          <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(90deg,hsl(var(--foreground))_1px,transparent_1px)] [background-size:9px_100%]" />
+          <div className="absolute inset-x-0 top-24 h-px bg-gradient-to-r from-transparent via-accent/55 to-transparent" />
+          <div className="absolute right-0 top-16 hidden h-[72%] w-[54%] overflow-hidden lg:block">
+            <div className="absolute inset-0 [mask-image:linear-gradient(90deg,transparent,black_18%,black_80%,transparent)]">
+              <div className="grid h-full grid-cols-3 gap-5 font-mono text-[0.68rem] leading-6 text-accent/45">
+                {editorColumns.map((column, columnIndex) => (
+                  <div
+                    key={column.join("-")}
+                    className={columnIndex === 1 ? "translate-y-10 space-y-4" : "space-y-4"}
+                  >
+                    {Array.from({ length: 5 }).map((_, repeatIndex) => (
+                      <div key={`${columnIndex}-${repeatIndex}`} className="rounded-sm border border-border/35 bg-card/25 p-3 backdrop-blur-sm">
+                        {column.map((line, lineIndex) => (
+                          <p key={`${line}-${repeatIndex}`} className="whitespace-nowrap">
+                            <span className="mr-3 text-foreground/25">{String(lineIndex + 1).padStart(2, "0")}</span>
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="absolute bottom-20 left-10 right-16 h-px bg-gradient-to-r from-accent/70 via-border/70 to-transparent" />
+            <div className="absolute bottom-20 left-10 h-28 w-px bg-gradient-to-b from-accent/70 via-border/70 to-transparent" />
+            <div className="absolute bottom-48 left-10 right-32 h-px bg-gradient-to-r from-accent/45 via-border/60 to-transparent" />
+            <div className="absolute bottom-48 right-32 h-24 w-px bg-gradient-to-b from-accent/45 via-border/60 to-transparent" />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/88 to-background/68 dark:via-background/90 dark:to-background/72" />
 
           <div className="container hero-shell relative z-10 grid min-h-dvh items-center gap-12 pt-28 lg:grid-cols-[1fr_0.72fr]">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-4xl">
