@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Reply Solutions",
   shortName: "Reply",
-  title: "Reply Solutions | Software House para Produtos Web, Mobile e Operação Digital",
+  title: "Reply Solutions | Desenvolvemos, auditamos e evoluímos software para empresas que não podem parar.",
   description:
-    "Software house focada em desenvolvimento web e mobile, arquitetura de software, sustentação de produto e operação técnica para empresas em crescimento.",
+    "Desenvolvemos, auditamos e evoluímos software para empresas que não podem parar.",
   url: "https://replysolutions.com",
   locale: "pt_BR",
   keywords: [
