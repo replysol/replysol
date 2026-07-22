@@ -1,47 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { AlertTriangle, Gauge, GitBranch, UsersRound } from "lucide-react";
 import SectionHeading from "@/components/shared/section-heading";
 import { useI18n } from "@/i18n/locale-provider";
 
-const icons = [Gauge, GitBranch, UsersRound, AlertTriangle] as const;
-
 const ProblemsSection = () => {
   const { t } = useI18n();
-
   return (
-    <section className="section-space relative">
-      <div className="container section-shell">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <SectionHeading eyebrow={t.problems.eyebrow} title={t.problems.title} />
-          </motion.div>
-
-          <div className="grid gap-3 sm:grid-cols-2">
-            {t.problems.items.map(([title, description], index) => {
-              const Icon = icons[index] ?? Gauge;
-
-              return (
-                <motion.article
-                  key={title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.06 }}
-                  className="rounded-lg border border-border/60 bg-card/70 p-5 backdrop-blur-md"
-                >
-                  <Icon className="mb-5 h-5 w-5 text-accent" />
-                  <h3 className="font-mono text-sm font-semibold text-foreground">{title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{description}</p>
-                </motion.article>
-              );
-            })}
-          </div>
+    <section className="section-space bg-background">
+      <div className="section-shell">
+        <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+          <SectionHeading eyebrow={t.problems.eyebrow} title={t.problems.title} className="relative border-l-2 border-cyan-500 pl-6" />
+          <p className="max-w-xl text-base leading-7 text-muted-foreground lg:justify-self-end">{t.problems.description}</p>
+        </div>
+        <div className="grid border-y border-border sm:grid-cols-2 lg:grid-cols-4">
+          {t.problems.items.map(([title, description], index) => {
+            return (
+              <article key={title} className="border-b border-border p-6 sm:border-r lg:border-b-0 lg:last:border-r-0 sm:p-7">
+                <span className="font-mono text-[0.68rem] text-cyan-600">0{index + 1}</span>
+                <div className="mt-5 h-0.5 w-8 bg-cyan-500" />
+                <h3 className="mt-5 text-base font-semibold tracking-[-0.015em] text-foreground">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -49,4 +30,3 @@ const ProblemsSection = () => {
 };
 
 export default ProblemsSection;
-

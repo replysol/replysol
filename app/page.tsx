@@ -6,7 +6,6 @@ import Footer from "@/components/footer-section";
 
 import Script from "next/script";
 import Navbar from "@/components/shared/navbar";
-import WhatsAppButton from "@/components/shared/whatsapp-button";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import ProblemsSection from "@/components/problems-section";
@@ -55,7 +54,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <Navbar />
-      <WhatsAppButton/>
       <HeroSection />
       <ProblemsSection />
       <ServicesSection />

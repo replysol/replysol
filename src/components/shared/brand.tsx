@@ -10,15 +10,22 @@ type BrandProps = {
   href?: string;
   className?: string;
   textClassName?: string;
+  inverse?: boolean;
 };
 
-const Brand = ({ href = "/", className, textClassName }: BrandProps) => {
+const Brand = ({ href = "/", className, textClassName, inverse = false }: BrandProps) => {
   return (
-    <Link href={href} className={cn("flex items-center gap-2", className)} aria-label="Reply Solutions">
-      <Image src={logoDark} alt="" className="block h-8 w-auto dark:hidden" aria-hidden="true" priority />
-      <Image src={logoLight} alt="" className="hidden h-8 w-auto dark:block" aria-hidden="true" priority />
-      <span className={cn("font-mono text-sm font-bold tracking-wider text-foreground", textClassName)}>
-        REPLY<span className="text-gradient-accent">_</span>SOLUTIONS
+    <Link href={href} className={cn("flex items-center gap-3", className)} aria-label="Reply Solutions">
+      {inverse ? (
+        <Image src={logoLight} alt="" className="h-9 w-auto" aria-hidden="true" priority />
+      ) : (
+        <>
+          <Image src={logoDark} alt="" className="block h-9 w-auto dark:hidden" aria-hidden="true" priority />
+          <Image src={logoLight} alt="" className="hidden h-9 w-auto dark:block" aria-hidden="true" priority />
+        </>
+      )}
+      <span className={cn("text-sm font-extrabold tracking-[-0.025em] text-foreground", inverse && "text-white", textClassName)}>
+        REPLY<span className="font-medium text-accent"> / </span>SOLUTIONS
       </span>
     </Link>
   );

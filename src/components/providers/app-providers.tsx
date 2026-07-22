@@ -15,7 +15,7 @@ type AppProvidersProps = {
 const AppProviders = ({ children, initialLocale }: AppProvidersProps) => {
   return (
     <LocaleProvider initialLocale={initialLocale}>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange enableColorScheme={false}>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange enableColorScheme={false}>
         <TooltipProvider>
           <Toaster />
           {children}

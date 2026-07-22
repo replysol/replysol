@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Reply Solutions",
   shortName: "Reply",
-  title: "Reply Solutions | Desenvolvemos, auditamos e evoluímos software para empresas que não podem parar.",
+  title: "Reply Solutions | Engenharia de software e segurança",
   description:
-    "Desenvolvemos, auditamos e evoluímos software para empresas que não podem parar.",
+    "Desenvolvimento web e mobile, segurança ofensiva e evolução de sistemas críticos para empresas que precisam operar com confiança.",
   url: "https://replysolutions.com",
   locale: "pt_BR",
   keywords: [
@@ -11,12 +11,14 @@ export const siteConfig = {
     "desenvolvimento web",
     "desenvolvimento mobile",
     "arquitetura de software",
+    "pentest",
+    "segurança de aplicações",
+    "modernização de sistemas",
     "next.js",
     "react",
     "typescript",
   ],
   contactEmail: "contato@replysolutions.com",
-  supportPhone: "+55 11 99999-9999",
   social: {
     linkedin: "https://www.linkedin.com/company/reply-solutions",
   },

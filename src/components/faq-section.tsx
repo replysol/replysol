@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import SectionHeading from "./shared/section-heading";
@@ -16,41 +15,31 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="section-space relative border-t border-border/50 bg-card/20">
-      <div className="absolute inset-0 bg-grid opacity-20" />
-
-      <div className="relative container section-shell max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
+    <section className="section-space border-t border-border bg-card">
+      <div className="section-shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
+        <div className="lg:sticky lg:top-32 lg:self-start">
           <SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.title} />
-        </motion.div>
+          <p className="mt-5 max-w-md text-base leading-7 text-muted-foreground">{t.faq.description}</p>
+        </div>
 
-        <div className="space-y-4">
+        <div className="overflow-hidden border border-border bg-card">
           {t.faq.items.map(([question, answer], index) => {
             const isOpen = openIndex === index;
 
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="overflow-hidden rounded-lg border border-border/60 bg-card/70 backdrop-blur-md"
+                className="overflow-hidden border-b border-border last:border-b-0"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between px-5 py-4 text-left"
+                  className="flex w-full items-center justify-between gap-5 bg-card px-5 py-6 text-left transition hover:bg-secondary/40 sm:px-6"
                 >
-                  <span className="text-lg font-medium text-foreground">{question}</span>
+                  <span className="text-base font-semibold leading-6 tracking-[-0.01em] text-foreground">{question}</span>
 
                   <ChevronDown
                     className={cn(
-                      "h-4 w-4 text-muted-foreground transition-transform",
+                      "h-5 w-5 shrink-0 text-accent transition-transform",
                       isOpen && "rotate-180"
                     )}
                   />
@@ -63,12 +52,12 @@ const FAQSection = () => {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-4 text-md text-muted-foreground leading-relaxed">
+                    <p className="border-t border-border bg-secondary/25 px-5 py-5 text-sm leading-7 text-muted-foreground sm:px-6">
                       {answer}
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
