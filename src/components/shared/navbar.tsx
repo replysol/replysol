@@ -14,15 +14,11 @@ const Navbar = () => {
 
   const developmentNavigation = [
     { label: t.nav.softwareDevelopment, description: t.nav.softwareDevelopmentDescription, href: appRoutes.softwareDevelopment },
-    { label: t.nav.mobileDevelopment, description: t.nav.mobileDevelopmentDescription, href: appRoutes.mobileDevelopment },
   ];
   const securityNavigation = [
     { label: t.nav.pentest, description: t.nav.pentestDescription, href: appRoutes.pentest },
   ];
-  const productNavigation = [
-    { label: t.nav.aiReviewer, description: t.nav.novaDescription, href: appRoutes.nova },
-  ];
-  const solutionsNavigation = [...developmentNavigation, ...securityNavigation, ...productNavigation];
+  const solutionsNavigation = [...developmentNavigation, ...securityNavigation];
   const mainNavigation = [
     { label: t.nav.about, href: sectionRoutes.about },
     { label: t.nav.contact, href: sectionRoutes.contact },
@@ -36,7 +32,6 @@ const Navbar = () => {
   const solutionGroups = [
     { label: locale === "pt-br" ? "Desenvolvimento" : "Development", items: developmentNavigation },
     { label: locale === "pt-br" ? "Segurança" : "Security", items: securityNavigation },
-    { label: locale === "pt-br" ? "Produtos" : "Products", items: productNavigation },
   ];
 
   const SolutionsDropdown = () => (
@@ -46,7 +41,7 @@ const Navbar = () => {
         <ChevronDown className="h-3.5 w-3.5" />
       </button>
       <div className="invisible absolute inset-x-0 top-full translate-y-1 border-t border-cyan-500 bg-white opacity-0 shadow-[0_28px_60px_rgba(5,25,40,0.12)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 dark:bg-[#071724]">
-        <div className="section-shell grid gap-10 py-10 lg:grid-cols-3 lg:gap-16">
+        <div className="section-shell grid gap-10 py-10 lg:grid-cols-2 lg:gap-16">
           {solutionGroups.map((group, groupIndex) => (
             <div key={group.label} className={groupIndex > 0 ? "border-l border-border pl-10" : ""}>
               <p className="mb-5 text-xs font-extrabold uppercase tracking-[0.08em] text-[#123a5d] dark:text-white">{group.label}</p>

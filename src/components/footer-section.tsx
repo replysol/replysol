@@ -19,9 +19,7 @@ const Footer = () => {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.1em] text-white">{t.footer.solutions}</p>
           <div className="space-y-3 text-sm text-slate-400">
             <Link className="block transition hover:text-cyan-300" href={appRoutes.softwareDevelopment}>{t.nav.softwareDevelopment}</Link>
-            <Link className="block transition hover:text-cyan-300" href={appRoutes.mobileDevelopment}>{t.nav.mobileDevelopment}</Link>
             <Link className="block transition hover:text-cyan-300" href={appRoutes.pentest}>{t.nav.pentest}</Link>
-            <Link className="block transition hover:text-cyan-300" href={appRoutes.nova}>{t.nav.aiReviewer}</Link>
           </div>
         </div>
         <div>

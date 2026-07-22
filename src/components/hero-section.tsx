@@ -9,9 +9,7 @@ import { useI18n } from "@/i18n/locale-provider";
 
 const solutionRoutes = [
   appRoutes.softwareDevelopment,
-  appRoutes.mobileDevelopment,
   appRoutes.pentest,
-  appRoutes.nova,
 ] as const;
 
 const HeroSection = () => {
@@ -45,7 +43,7 @@ const HeroSection = () => {
       </div>
 
       <div className="border-t border-white/15 bg-black/45 backdrop-blur-sm">
-        <div className="section-shell grid sm:grid-cols-2 lg:grid-cols-4">
+        <div className="section-shell grid sm:grid-cols-2">
           {t.homeServices.items.map((item, index) => {
             const title = item[0];
             return (

@@ -10,17 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: getAbsoluteUrl(appRoutes.nova),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: getAbsoluteUrl(appRoutes.softwareDevelopment),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: getAbsoluteUrl(appRoutes.mobileDevelopment),
       changeFrequency: "weekly",
       priority: 0.9,
     },

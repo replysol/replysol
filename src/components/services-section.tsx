@@ -8,9 +8,7 @@ import { useI18n } from "@/i18n/locale-provider";
 
 const serviceLinks = [
   appRoutes.softwareDevelopment,
-  appRoutes.mobileDevelopment,
   appRoutes.pentest,
-  appRoutes.nova,
 ] as const;
 
 const ServicesSection = () => {
