@@ -1,7 +1,8 @@
 export const appRoutes = {
   home: "/",
-  aiCodeReviewerSecurity: "/ai-code-reviewer-security",
+  nova: "/nova",
   softwareDevelopment: "/software-development",
+  mobileDevelopment: "/mobile-development",
   pentest: "/pentest",
   login: "/login",
   dashboard: "/dashboard",

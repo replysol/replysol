@@ -4,13 +4,12 @@ import { createPageMetadata } from "@/lib/metadata";
 import SoftwareDevelopmentPageView from "@/views/SoftwareDevelopmentPage";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Desenvolvimento de Software | Reply Solutions",
+  title: "Desenvolvimento Web | Reply Solutions",
   description:
-    "Desenvolvimento de software sob medida, modernizacao, APIs, plataformas web, sustentacao tecnica e evolucao continua para empresas que nao podem parar.",
+    "Desenvolvimento web sob medida, modernizacao de sistemas, APIs, plataformas internas e sustentacao tecnica para empresas que nao podem parar.",
   path: appRoutes.softwareDevelopment,
 });
 
 export default function SoftwareDevelopmentPage() {
   return <SoftwareDevelopmentPageView />;
 }
-

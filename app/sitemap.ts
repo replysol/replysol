@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: getAbsoluteUrl(appRoutes.aiCodeReviewerSecurity),
+      url: getAbsoluteUrl(appRoutes.nova),
       changeFrequency: "weekly",
       priority: 0.9,
     },
@@ -20,9 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: getAbsoluteUrl(appRoutes.mobileDevelopment),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: getAbsoluteUrl(appRoutes.pentest),
       changeFrequency: "weekly",
-      priority: 0.85,
+      priority: 0.9,
     },
   ];
 }

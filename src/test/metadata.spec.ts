@@ -8,7 +8,7 @@ import { createPageMetadata, getAbsoluteUrl } from "@/lib/metadata";
 
 describe("metadata helpers", () => {
   it("builds absolute urls from the configured site url", () => {
-    expect(getAbsoluteUrl(appRoutes.aiCodeReviewerSecurity)).toBe("https://replysolutions.com/ai-code-reviewer-security");
+    expect(getAbsoluteUrl(appRoutes.nova)).toBe("https://replysolutions.com/nova");
   });
 
   it("creates page metadata with canonical url and noindex support", () => {
