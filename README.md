@@ -2,7 +2,7 @@
 
 Site institucional da Reply Solutions, desenvolvido com Next.js, React, TypeScript e Tailwind CSS.
 
-O projeto inclui a landing page principal, uma pagina de produto para o **NOVA** e internacionalizacao via cookie/deteccao de pais.
+O projeto inclui a landing page principal, paginas de servicos e internacionalizacao via cookie/deteccao de pais.
 Tambem inclui um workspace mockado com login, dashboard do desenvolvedor, projetos, kanban, admin, financeiro e usuarios.
 
 ## Stack
@@ -20,7 +20,6 @@ Tambem inclui um workspace mockado com login, dashboard do desenvolvedor, projet
 ## Funcionalidades
 
 - Landing page responsiva da Reply Solutions
-- Pagina dedicada ao produto NOVA
 - Pagina dedicada a desenvolvimento de software
 - Pagina dedicada a pentest e seguranca ofensiva
 - Multi-idioma em `pt-br` e `en` sem prefixo de rota
@@ -36,7 +35,6 @@ Tambem inclui um workspace mockado com login, dashboard do desenvolvedor, projet
 ## Rotas
 
 - `/` - Site principal
-- `/nova` - Pagina do produto NOVA
 - `/software-development` - Pagina de desenvolvimento de software
 - `/pentest` - Pagina de pentest e seguranca ofensiva
 - `/login` - Acesso mockado ao workspace
