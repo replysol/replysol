@@ -99,6 +99,26 @@ export const dictionaries = {
         ],
       ],
     },
+    firstWebsite: {
+      eyebrow: "Para micro e pequenos negócios",
+      title: "Seu primeiro site?",
+      description:
+        "Coloque sua empresa na internet com uma página profissional, rápida e feita para transformar visitas em conversas — sem complicação e com investimento que cabe no começo do negócio.",
+      features: [
+        ["A cara do seu negócio", "Visual personalizado para transmitir confiança desde o primeiro acesso."],
+        ["Perfeito no celular", "Experiência rápida e organizada em celulares, tablets e computadores."],
+        ["Contato em um clique", "Botão de WhatsApp e formulário para facilitar novos pedidos e orçamentos."],
+        ["Pronto para ser encontrado", "Estrutura básica de SEO para apresentar sua empresa nos buscadores."],
+      ],
+      investmentLabel: "Condição promocional",
+      originalPrice: "De R$ 1.000 a R$ 2.000",
+      savings: "Economize até R$ 500",
+      to: "até",
+      priceNote:
+        "Oferta para novos projetos. O valor final varia conforme a quantidade de seções, o conteúdo e as integrações necessárias.",
+      reassurance: "Você acompanha cada etapa e aprova o visual antes da publicação.",
+      cta: "Conhecer a oferta",
+    },
     problems: {
       eyebrow: "Desafios de negócio",
       title: "Quando a tecnologia limita a operação, o negócio sente primeiro.",
@@ -481,6 +501,26 @@ export const dictionaries = {
           "Explore security",
         ],
       ],
+    },
+    firstWebsite: {
+      eyebrow: "For micro and small businesses",
+      title: "Your first website?",
+      description:
+        "Put your business online with a professional, fast page designed to turn visits into conversations — without complexity and with an investment that fits an early-stage business.",
+      features: [
+        ["Made for your business", "A custom look that builds trust from the very first visit."],
+        ["Great on every screen", "A fast, organized experience on phones, tablets and computers."],
+        ["Contact in one click", "WhatsApp button and contact form to make inquiries and quotes easier."],
+        ["Ready to be found", "A basic SEO structure to introduce your business to search engines."],
+      ],
+      investmentLabel: "Promotional offer",
+      originalPrice: "Was BRL 1,000 to BRL 2,000",
+      savings: "Save up to BRL 500",
+      to: "to",
+      priceNote:
+        "Offer for new projects. The final price varies according to the number of sections, content and required integrations.",
+      reassurance: "You follow every stage and approve the design before publication.",
+      cta: "Explore the offer",
     },
     problems: {
       eyebrow: "Business challenges",

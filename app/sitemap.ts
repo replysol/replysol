@@ -15,6 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: getAbsoluteUrl(appRoutes.firstWebsite),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
       url: getAbsoluteUrl(appRoutes.pentest),
       changeFrequency: "weekly",
       priority: 0.9,

@@ -8,6 +8,7 @@ import Script from "next/script";
 import Navbar from "@/components/shared/navbar";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
+import FirstWebsiteSection from "@/components/first-website-section";
 import ProblemsSection from "@/components/problems-section";
 import TeamCarouselSection from "@/components/team-carousel-section";
 import FAQSection from "@/components/faq-section";
@@ -57,6 +58,7 @@ export default function HomePage() {
       <HeroSection />
       <ProblemsSection />
       <ServicesSection />
+      <FirstWebsiteSection />
       <AboutSection />
       <FAQSection />
       <ContactSection />

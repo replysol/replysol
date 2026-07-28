@@ -1,5 +1,6 @@
 export const appRoutes = {
   home: "/",
+  firstWebsite: "/primeiro-site",
   softwareDevelopment: "/software-development",
   pentest: "/pentest",
   login: "/login",

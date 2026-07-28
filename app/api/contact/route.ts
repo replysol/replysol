@@ -6,6 +6,7 @@ export const runtime = "nodejs";
 const contactSchema = z.object({
   name: z.string().trim().min(1).max(120),
   email: z.string().trim().email().max(200),
+  phone: z.string().trim().max(40).optional().default(""),
   company: z.string().trim().max(120).optional().default(""),
   message: z.string().trim().min(1).max(4000),
 });
@@ -54,7 +55,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, company, message } = result.data;
+  const { name, email, phone, company, message } = result.data;
 
   const response = await fetch(discordWebhookUrl, {
     method: "POST",
@@ -72,6 +73,7 @@ export async function POST(request: Request) {
           fields: [
             { name: "Nome", value: truncate(name, 1024), inline: true },
             { name: "Email", value: truncate(email, 1024), inline: true },
+            { name: "Telefone", value: phone ? truncate(phone, 1024) : "Nao informado", inline: true },
             { name: "Empresa", value: company ? truncate(company, 1024) : "Nao informado", inline: true },
           ],
           footer: {
